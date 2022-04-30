@@ -1,0 +1,27 @@
+<%= form_with(model: blood) do |form| %>
+  <% if blood.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blood.errors.count, "error") %> prohibited this blood from being saved:</h2>
+
+      <ul>
+        <% blood.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :maxblood %>
+    <%= form.number_field :maxblood %>
+  </div>
+
+  <div class="field">
+    <%= form.label :minblood %>
+    <%= form.number_field :minblood %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

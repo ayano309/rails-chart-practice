@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Maxblood:</strong>
+  <%= @blood.maxblood %>
+</p>
+
+<p>
+  <strong>Minblood:</strong>
+  <%= @blood.minblood %>
+</p>
+
+<%= link_to 'Edit', edit_blood_path(@blood) %> |
+<%= link_to 'Back', bloods_path %>

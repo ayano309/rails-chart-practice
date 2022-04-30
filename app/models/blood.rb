@@ -1,0 +1,2 @@
+class Blood < ApplicationRecord
+end
